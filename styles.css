@@ -1,0 +1,436 @@
+/*Maya Villalobos*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(https://fonts.google.com/share?selection.family=Molle:ital@1%7CMontserrat );
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+:root{
+    --yellow:#f6d64A;
+    --teal:#55bcd5;
+    --purple:#9b26b0;
+    --blue:#499bd2;
+    --dark-gray:#222222;
+    --light-gray:#eaeaea;
+    --white:#ffffff;
+    --black:#000000;
+}
+#skip{
+	left: 50%;
+	padding: 8px;
+	position: absolute;
+	transform: translateY(-100%);
+	transition: transform 0.3s;
+	background-color: var(--white);
+	text-decoration: none;
+}
+#skip:focus{
+	transform: translateY(0%);
+}
+header{
+	background: rgb(85,188,213);
+	background: linear-gradient(180deg, rgba(85,188,213,1) 35%, rgba(255,255,255,1) 100%);
+}
+#menu{
+	left: -100%;
+	position: absolute;
+	top: 60px;
+	font-family: Montserrat;
+	background-color: var(--teal);
+}
+#toggle:checked + #menu {
+	display: block;
+	left: 35%;
+}
+[for="toggle"]{
+	position: fixed;
+	top: 5px;
+	right: 0;
+	background-color: var(--yellow);
+	padding: 20px 60px;
+	cursor: pointer;
+	font-family: Montserrat;
+	text-transform: uppercase;
+	font-weight: bold;
+	
+}
+[type=checkbox]{
+	opacity: 0;
+}
+#menu a{
+	text-decoration: none;
+	color: var(--black);
+	padding: 20px 100px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+#menu li{
+	padding: 20px;
+}
+#menu a:hover{
+	color: var(--white);
+	cursor: pointer;
+}
+[for="toggle"]:hover{
+	color: var(--white);
+}
+.sr-only{
+	display: none;
+}
+h1{
+	font-size: 80px;
+	font-family: Molle;
+	padding: 5px 30px;
+	color: var(--dark-gray);
+}
+header p{
+	margin-left:30px;
+	font-size: 30px;
+	line-height: 1.4;
+}
+body{
+	font-family: Montserrat;
+}
+h2{
+	font-family: Molle;
+	font-size: 50px;
+	padding-bottom: 10px;
+	padding-top: 30px;
+	margin-left:30px;
+}
+p{
+	font-size: 20px;
+	line-height: 1.4;
+	padding-bottom: 20px;
+	margin-left: 30px;
+}
+#intro img{
+	width: 100%;
+	padding-bottom: 10px;
+	margin-left: 0;
+}
+#plan{
+	background-color: var(--yellow);
+}
+h3{
+	font-family: Molle;
+	font-size: 50px;
+	text-align: center;
+	padding: 20px;
+}
+h4{
+	font-family: Montserrat;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	font-size: 30px;
+	padding: 10px;
+}
+#plan{
+	display: flex;
+	margin: auto;
+	flex-direction: column;
+	align-items: center;
+}
+#plan svg{
+	background-color: var(--teal);
+	padding: 20px;
+}
+#plan section{
+	background-color: var(--teal);
+	margin-top: 20px;
+	margin-bottom:20px;
+	width: 90%;
+	padding: 30px;
+	text-align: center;
+	border-radius: 20px;
+	outline-color: var(--white);
+	outline-style:solid;
+}
+#testimonials {
+	display: flex;
+	margin: auto;
+	flex-direction: column;
+	align-items: center;
+}
+#testimonials section{
+	margin:20px 0px;
+	width: 75%;
+	text-align: center;
+}
+q{
+	width: 100px;
+	font-style: italic;
+	line-height: 1.4;
+}
+#about{
+	background-color: var(--blue);
+}
+#about div{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items:center ;
+	row-gap: 20px;
+}
+#about p{
+	text-align: center;
+	color: var(--dark-gray);
+	margin: 0px;
+}
+#about h4{
+	text-align: center;
+}
+.form-required{
+	font-family: Montserrat;
+	font-size: 30px;
+	font-style: italic;
+}
+#contact h3{
+	text-align: left;
+	margin-top: 20px;
+}
+form{
+	display: block;
+	width: 300px;
+	padding: 1em;
+}
+input, form label, fieldset{
+	display: block;
+	width: 95%;
+	padding: 10px;
+}
+legend{
+	padding: 10px;
+}
+label, legend {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+.required{
+	color: var(--purple);
+}
+input{
+	margin-left: 10px;
+	border: 2px solid var(--purple);
+}
+[type="radio"]{
+	accent-color: var(--purple);
+	display: inline-block;
+	position: absolute;
+	right: 200px;
+}
+fieldset label{
+	margin-left: 30px;
+	font-weight: normal;
+	text-transform: none;
+}
+select{
+	margin-left: 10px;
+	width: 100%;
+	height: 40px;
+	border: 2px solid var(--purple);
+	font-family: Montserrat;
+}
+[type="submit"]{
+	background-color: var(--purple);
+	font-family: Montserrat;
+	color:var(--white);
+	text-transform: uppercase;
+	margin: 10px;
+	width: 100%;
+	font-weight: bold;
+	padding: 20px 0px;
+}
+footer{
+	background-color: var(--light-gray);
+	text-align: center;
+	padding: 30px;
+}
+footer a{
+	text-decoration: none;
+	font-family: Montserrat;
+	text-align: center;
+}
+@media only screen and (min-width: 768px ) and (max-width:1039px){
+	header{
+		padding-top: 30px;
+		display:grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows:100px 70px 50px;
+	}	
+	header p{
+		grid-column:2/4;
+	}
+	#menu{
+		left: 0;
+		background-color: transparent;
+		position: absolute;
+		top: 260px;
+		left: 100px;
+	}
+	#menu li{
+		float: left;
+		margin: 0;
+		padding: 0 10px;
+	}
+	#menu a{
+		padding: 20px;
+		background-color: var(--white);
+	}
+	[for="toggle"]{
+		display: none;
+	}
+	#menu a:hover{
+		color: #000000;
+		background-color: var(--yellow);
+	}
+	h2{
+		margin-top: 60px;
+	}
+	main{
+		margin: 0 60px;
+	}
+	#img-grid{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 10px;
+	}
+	#img-grid picture{
+		grid-column: 1/3;
+	}
+	#plan div, #testimonials div{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	#plan section{
+		transform: scale(0.8);
+	}
+	#about div{
+		display: flex;
+		transform: scale(0.8);
+	}
+	#about img{
+		transform: scale(0.8);
+	}
+}
+@media only screen and (min-width: 1040px ){
+	header{
+		padding-top: 30px;
+		display: grid;
+		grid-template-rows: 100px 50px;
+		grid-template-columns: 250px 800px;
+	}
+	#logo img{
+		transform: scale(1.3);
+	}
+	header p{
+		grid-column: 2;
+	}
+	#menu{
+		left: 0;
+		background-color: transparent;
+		position: fixed;
+		top: 0px;
+		left: 900px;
+	}
+	#menu li{
+		float: left;
+		margin: 0;
+		padding: 0 10px;
+	}
+	#menu a{
+		padding: 20px;
+		background-color: var(--white);
+	}
+	[for="toggle"]{
+		display: none;
+	}
+	#menu a:hover{
+		color: #000000;
+		background-color: var(--yellow);
+	}
+	main{
+		margin: 60px 40px;
+	}
+	#img-grid{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		gap: 10px;
+	}
+	#intro h2, #intro p{
+		float: left;
+		width: 50%;
+	}
+	#img-grid picture{
+		grid-column: 1/3;
+	}
+	#plan div, #testimonials div{
+		display: flex;
+		margin-bottom: 30px;
+	}
+	#plan section{
+		transform: scale(0.8);
+	}
+	#plan h3{
+		padding-top: 30px;
+	}
+	#about div{
+		display: flex;
+		transform: scale(0.8);
+		justify-content: space-evenly;
+	}
+	#about img{
+		transform: scale(0.8);
+	}
+	form{
+		display: flex;
+		justify-content: space-evenly;
+		width: 100%;
+	}
+}
